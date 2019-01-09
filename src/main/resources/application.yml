@@ -1,0 +1,46 @@
+server:
+  port: 8081
+  tomcat:
+    uri-encoding: UTF-8
+  
+
+spring:
+    datasource:
+        name: test
+        url: jdbc:mysql://127.0.0.1:3306/springbootdb
+        username: root
+        password: 300400
+        # 使用druid数据源
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+
+    #thymeleaf 静态资源配置
+    thymeleaf:
+        prefix: classpath:/templates/
+        suffix: .html
+        mode: HTML
+        encoding: UTF-8
+        cache: false
+
+    #设置编码
+    http:
+        encoding:
+          force: true
+          charset: UTF-8
+          enabled: true
+
+
+
+## mybatis配置
+mybatis:
+    mapper-locations: classpath:mapping/*.xml  #注意：一定要对应mapper映射xml文件的所在路径
+    type-aliases-package: com.example.model    # 注意：对应实体类的路径
+
+#pagehelper分页插件
+pagehelper:
+    helperDialect: mysql
+    reasonable: true
+    supportMethodsArguments: true
+    params: count=countSql
+
+

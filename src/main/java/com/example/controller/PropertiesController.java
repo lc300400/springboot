@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @PropertySource(value = {"classpath:databases.properties"})
 public class PropertiesController {
 
-    @Value("${test.msg}")
+    @Value("${test.name}")
     private String msg;
 
     @Autowired
