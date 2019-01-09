@@ -33,10 +33,11 @@ public class PropertiesController {
         return "方式二：" + env.getProperty("test.msg");
     }
 
-    //三、读取自定义properties文件内容(@PropertySource+Environment)
+    //三、读取自定义properties文件内容(@PropertySource+Environment/@value)
     @RequestMapping("/method3")
     public String method3() {
         return "方式三： " + env.getProperty("test.password");
+        //return "方式三： " + msg;
     }
 
 
