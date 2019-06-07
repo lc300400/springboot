@@ -1,10 +1,10 @@
 package com.example.controller;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
-import java.util.List;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 
 /**
@@ -21,12 +21,5 @@ public class ZoonController {
         System.out.println(id);
         return "9999";
     }
-
-    public static void main(String[] args) {
-        System.out.println("1231");
-        List list = new ArrayList();
-
-    }
-
 
 }
