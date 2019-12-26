@@ -27,6 +27,7 @@ public class SpringbootApplication implements CommandLineRunner {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
 
+
 	@Override
 	public void run(String... strings) throws Exception {
 		InetSocketAddress address = new InetSocketAddress(url,port);
